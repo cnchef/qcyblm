@@ -1,5 +1,3 @@
-<img align='right' src="https://metrics.lecoq.io/qcyblm" />
-
 #### 🌈 Hi, I'm [qcyblm](https://qcyblm.github.io/).
 
 #### 💬 Ask me about anything [here](https://github.com/qcyblm/qcyblm/issues).
