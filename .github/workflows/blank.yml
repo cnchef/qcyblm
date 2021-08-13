@@ -8,4 +8,4 @@ jobs:
         uses: actions/checkout@main
       - run: |
           date > generated.txt
-          gpg -k
+          gpg --list-secret-keys --keyid-format=long
