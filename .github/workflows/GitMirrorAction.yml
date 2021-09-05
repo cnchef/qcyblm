@@ -13,6 +13,7 @@ jobs:
           fetch-depth: 0
       - run: |
           date > generated.txt
+          git config user.name $GITHUB_ACTOR
           git remote add M2Team https://github.com/M2Team/NSudoOfficial.git
           git remote -v
           git fetch --all
