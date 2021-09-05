@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 0
       - run: |
           date > generated.txt
-          git remote add M2Team https://github.com/qcyblm/m2team.github.io.git
+          git remote add M2Team https://github.com/M2Team/m2team.github.io.git
           git remote add origin https://github.com/qcyblm/m2team.github.io.git
           git fetch --all
           git merge M2Team/master
