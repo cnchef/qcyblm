@@ -14,7 +14,7 @@ jobs:
       - run: |
           date > generated.txt
           git remote add M2Team https://github.com/M2Team/NSudo.git
-          git remote set-url origin https://github-actions[bot]:${{ github.token }}@github.com/$GITHUB_ACTOR/NSudoOfficial.git
+          git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.ACTIONS_TOKEN }}@github.com/$GITHUB_ACTOR/NSudoOfficial.git
           git fetch --all
           git merge M2Team/master
           git push origin master
