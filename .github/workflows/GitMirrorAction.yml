@@ -1,0 +1,22 @@
+name: Git Mirror Action
+on:
+  push:
+    branches:
+      - master
+jobs:
+  m2team.github.io:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          repository: qcyblm/m2team.github.io
+          ref: 'master'
+          persist-credentials: false
+          fetch-depth: 0
+      - run: |
+          date > generated.txt
+          git remote add M2Team M2Team/m2team.github.io.git
+          git fetch -q --all
+          git mergin M2Team/master
+          git push -q qcyblm/m2team.github.io master
