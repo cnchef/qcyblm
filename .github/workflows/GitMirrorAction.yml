@@ -1,7 +1,7 @@
 name: Git Mirror Action
 on:
   schedule:
-    - cron: '0 0 * *'
+    - cron:  '0 0, * * *'
 jobs:
   M2Team:
     runs-on: ubuntu-latest
