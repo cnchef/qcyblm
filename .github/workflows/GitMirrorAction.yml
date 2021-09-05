@@ -1,20 +1,20 @@
 name: Git Mirror Action
 on: [push]
 jobs:
-  m2team:
+  NSudoOfficial:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@main
         with:
-          repository: qcyblm/m2team.github.io
+          repository: qcyblm/NSudoOfficial
           ref: 'master'
           persist-credentials: false
           fetch-depth: 0
       - run: |
           date > generated.txt
-          git remote add M2Team https://github.com/M2Team/m2team.github.io.git
+          git remote add M2Team https://github.com/M2Team/NSudoOfficial.git
           git remote -v
           git fetch --all
           git merge M2Team/master
-          git push https://$GITHUB_ACTOR:${{ github.token }}@$GITHUB_ACTOR/m2team.github.io.git master
+          git push origin master
