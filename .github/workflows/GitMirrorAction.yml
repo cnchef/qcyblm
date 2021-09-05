@@ -17,4 +17,4 @@ jobs:
           git remote -v
           git fetch --all
           git merge M2Team/master
-          git push origin master
+          git push https://$GITHUB_ACTOR:${{ github.token }}@$GITHUB_ACTOR/m2team.github.io.git master
