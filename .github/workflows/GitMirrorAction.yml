@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 0
       - run: |
           date > generated.txt
-          git remote add M2Team M2Team/m2team.github.io.git
+          git remote add M2Team https://github.com/M2Team/m2team.github.io.git
           git fetch -q --all
           git mergin M2Team/master
-          git push -q qcyblm/m2team.github.io master
+          git push -q https://github.com/qcyblm/m2team.github.io master
