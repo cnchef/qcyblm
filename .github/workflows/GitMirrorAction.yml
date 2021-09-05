@@ -1,7 +1,7 @@
 name: Git Mirror Action
 on: [push]
 jobs:
-  m2team.github.io:
+  m2team:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
