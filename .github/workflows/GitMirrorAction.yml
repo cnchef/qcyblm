@@ -1,8 +1,5 @@
 name: Git Mirror Action
-on:
-  push:
-    branches:
-      - master
+on: [push]
 jobs:
   m2team.github.io:
     runs-on: ubuntu-latest
