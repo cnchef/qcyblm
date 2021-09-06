@@ -3,23 +3,6 @@ on:
   schedule:
     - cron:  '0 0, * * *'
 jobs:
-  M2Team:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@main
-        with:
-          repository: qcyblm/m2team.github.io
-          ref: 'master'
-          persist-credentials: false
-          fetch-depth: 0
-      - run: |
-          date > generated.txt
-          git remote add M2Team https://github.com/M2Team/m2team.github.io.git
-          git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.ACTIONS_TOKEN }}@github.com/$GITHUB_ACTOR/m2team.github.io.git
-          git fetch -q --all
-          git merge -q M2Team/master
-          git push -q origin master
   NSudoOfficial:
     runs-on: ubuntu-latest
     steps:
@@ -34,6 +17,5 @@ jobs:
           date > generated.txt
           git remote add M2Team https://github.com/M2Team/NSudo.git
           git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.ACTIONS_TOKEN }}@github.com/$GITHUB_ACTOR/NSudoOfficial.git
-          git fetch -q --all
-          git merge -q M2Team/master
+          git pull -q --rebase M2Team master
           git push -q origin master
